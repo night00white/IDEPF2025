@@ -112,53 +112,54 @@ const RoomReconstruction = ({ isActive, onNavigate }) => {
                 transition: 'all 2s ease-in-out',
                 zIndex: 20
             }}>
-                <h1 key={feeling ? 'valid' : 'question'} style={{
-                    color: '#fff',
-                    fontFamily: 'Helvetica Neue, sans-serif',
-                    fontWeight: 300,
-                    fontSize: '2rem',
-                    marginBottom: '40px',
-                    letterSpacing: '2px',
-                    transform: phase === 'reflection' ? 'translateY(0)' : 'translateY(20px)',
-                    transition: 'transform 2s ease-out'
-                }}>
-                    {feeling ? "Your feelings are valid." : "How are you feeling right now?"}
-                </h1>
-
                 {!feeling ? (
-                    <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        {['Overwhelmed', 'Numb', 'Anxious', 'Hopeful', 'Angry', 'Empty'].map((emotion) => (
-                            <button
-                                key={emotion}
-                                onClick={() => handleEmotionClick(emotion)}
-                                style={{
-                                    background: 'transparent',
-                                    border: '1px solid #555',
-                                    color: '#ccc',
-                                    padding: '10px 30px',
-                                    borderRadius: '30px',
-                                    fontSize: '1rem',
-                                    cursor: 'pointer',
-                                    transition: 'all 0.3s'
-                                }}
-                                onMouseOver={(e) => {
-                                    e.currentTarget.style.borderColor = '#fff';
-                                    e.currentTarget.style.color = '#fff';
-                                    e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
-                                }}
-                                onMouseOut={(e) => {
-                                    e.currentTarget.style.borderColor = '#555';
-                                    e.currentTarget.style.color = '#ccc';
-                                    e.currentTarget.style.background = 'transparent';
-                                }}
-                            >
-                                {emotion}
-                            </button>
-                        ))}
-                    </div>
+                    <>
+                        <h1 style={{
+                            color: '#fff',
+                            fontFamily: 'Helvetica Neue, sans-serif',
+                            fontWeight: 300,
+                            fontSize: '2rem',
+                            marginBottom: '40px',
+                            letterSpacing: '2px',
+                            transform: phase === 'reflection' ? 'translateY(0)' : 'translateY(20px)',
+                            transition: 'transform 2s ease-out'
+                        }}>
+                            How are you feeling right now?
+                        </h1>
+                        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                            {['Overwhelmed', 'Numb', 'Anxious', 'Hopeful', 'Angry', 'Empty'].map((emotion) => (
+                                <button
+                                    key={emotion}
+                                    onClick={() => handleEmotionClick(emotion)}
+                                    style={{
+                                        background: 'transparent',
+                                        border: '1px solid #555',
+                                        color: '#ccc',
+                                        padding: '10px 30px',
+                                        borderRadius: '30px',
+                                        fontSize: '1rem',
+                                        cursor: 'pointer',
+                                        transition: 'all 0.3s'
+                                    }}
+                                    onMouseOver={(e) => {
+                                        e.currentTarget.style.borderColor = '#fff';
+                                        e.currentTarget.style.color = '#fff';
+                                        e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+                                    }}
+                                    onMouseOut={(e) => {
+                                        e.currentTarget.style.borderColor = '#555';
+                                        e.currentTarget.style.color = '#ccc';
+                                        e.currentTarget.style.background = 'transparent';
+                                    }}
+                                >
+                                    {emotion}
+                                </button>
+                            ))}
+                        </div>
+                    </>
                 ) : (
                     <div style={{ animation: 'fadeIn 1s forwards' }}>
-                        <p style={{ color: '#aaa', fontStyle: 'italic' }}>From Reconstruction to Identify Support Networks</p>
+                        <p style={{ color: '#aaa', fontStyle: 'italic', fontSize: '1.2rem' }}>From Reconstruction to Identify Support Networks</p>
                         <style>{`@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }`}</style>
                     </div>
                 )}
