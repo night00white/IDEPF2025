@@ -279,7 +279,7 @@ const RoomGrowth = ({ isActive }) => {
                     border: '1px solid #444'
                 }}>
                     <h2 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '10px' }}>
-                        Understanding the PATH allows us to FIND INTERVENTION AND Break It.
+                        Understanding the PATH allows us to BREAK the cycle
                     </h2>
                     <button
                         onClick={handleReset}

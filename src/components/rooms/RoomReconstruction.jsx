@@ -158,7 +158,7 @@ const RoomReconstruction = ({ isActive, onNavigate }) => {
                     </div>
                 ) : (
                     <div style={{ animation: 'fadeIn 1s forwards' }}>
-                        <p style={{ color: '#aaa', fontStyle: 'italic', textTransform: 'uppercase' }}>PROCEEDING TO RECONSTRUCTION AND LETS FIND AREA OF INTERVENTION</p>
+                        <p style={{ color: '#aaa', fontStyle: 'italic' }}>From Reconstruction to Identify Support Networks</p>
                         <style>{`@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }`}</style>
                     </div>
                 )}
