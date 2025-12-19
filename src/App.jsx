@@ -63,13 +63,16 @@ function App() {
 
   const CurrentRoomComponent = ROOMS[currentRoomIndex].component;
 
+  const activeRoomId = ROOMS[currentRoomIndex].id;
+  const stressLevel = (activeRoomId === 'reconstruction' || activeRoomId === 'growth') ? 'high' : 'normal';
+
   return (
     <div className="app-container">
       {showIntro ? (
         <IntroPage onComplete={handleIntroComplete} />
       ) : (
         <>
-          <PhysiologyMonitor />
+          <PhysiologyMonitor stressLevel={stressLevel} />
           <main className={`room-container ${isTransitioning ? 'fading-out' : 'fading-in'}`}>
             {CurrentRoomComponent ? <CurrentRoomComponent isActive={!isTransitioning} onNavigate={changeRoom} /> : <div>Room not implemented</div>}
           </main>

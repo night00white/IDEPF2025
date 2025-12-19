@@ -9,7 +9,7 @@ const RESOURCES = [
     { title: "Safety Toolkit", icon: "🛡️" },
     { title: "Survivor Forum", icon: "💬" },
     { title: "Legal Aid", icon: "⚖️" },
-    { title: "Therapy Groups", icon: "❤️" },
+    { title: "Therapy Groups", icon: "♥" },
     { title: "System Support", icon: "🔒" },
 ];
 
