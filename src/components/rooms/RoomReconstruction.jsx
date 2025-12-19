@@ -159,6 +159,16 @@ const RoomReconstruction = ({ isActive, onNavigate }) => {
                     </>
                 ) : (
                     <div style={{ animation: 'fadeIn 1s forwards' }}>
+                        <h1 style={{
+                            color: '#fff',
+                            fontFamily: 'Helvetica Neue, sans-serif',
+                            fontWeight: 300,
+                            fontSize: '2rem',
+                            marginBottom: '40px',
+                            letterSpacing: '2px'
+                        }}>
+                            Your feelings are valid.
+                        </h1>
                         <p style={{ color: '#aaa', fontStyle: 'italic', fontSize: '1.2rem' }}>From Reconstruction to Identify Support Networks</p>
                         <style>{`@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }`}</style>
                     </div>
