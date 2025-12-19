@@ -165,8 +165,11 @@ const RoomInteraction = ({ isActive }) => {
 
             {isActive && (
                 <>
-                    <div style={{ position: 'absolute', top: '5%', left: '5%', pointerEvents: 'none' }}>
-                        <h2 style={{ color: '#fff', fontSize: '2rem', fontFamily: 'Impact' }}>SYSTEM SUPPORT</h2>
+                    <div style={{ position: 'absolute', top: '5%', left: '5%', pointerEvents: 'none', maxWidth: '400px' }}>
+                        <h2 style={{ color: '#fff', fontSize: '2rem', fontFamily: 'Impact', marginBottom: '10px' }}>SYSTEM SUPPORT</h2>
+                        <p style={{ color: '#ccc', fontSize: '0.9rem', lineHeight: '1.4' }}>
+                            Organizations do not work in isolation. This visualization maps the critical connections between Global Donors, Regional Bodies, and Local NGOs, demonstrating how resources and advocacy flow across borders to support unseen children.
+                        </p>
                     </div>
 
                     {/* Full Name Region Buttons */}
@@ -186,7 +189,7 @@ const RoomInteraction = ({ isActive }) => {
                                     fontSize: '0.65rem', // Smaller text
                                     transition: 'all 0.3s',
                                     textTransform: 'uppercase',
-                                    letterSpacing: '1px'
+                                    letterSpacing: '0px' // Removed extra spacing
                                 }}
                             >
                                 {BUTTON_LABELS[region]}

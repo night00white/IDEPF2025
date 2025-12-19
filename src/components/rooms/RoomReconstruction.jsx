@@ -112,7 +112,7 @@ const RoomReconstruction = ({ isActive, onNavigate }) => {
                 transition: 'all 2s ease-in-out',
                 zIndex: 20
             }}>
-                <h1 style={{
+                <h1 key={feeling ? 'valid' : 'question'} style={{
                     color: '#fff',
                     fontFamily: 'Helvetica Neue, sans-serif',
                     fontWeight: 300,
